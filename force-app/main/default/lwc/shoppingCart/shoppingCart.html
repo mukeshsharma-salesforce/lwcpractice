@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-page-header">
+        <div class="slds-clearfix">
+            <div class="slds-float_right">
+                <lightning-icon icon-name="custom:custom1" alternative-text="Wishlist" title="Wishlist">
+                </lightning-icon>
+                <span aria-hidden="true" class="slds-badge slds-theme_warning">{wishlistCount}</span>
+                <span class="slds-p-left_medium">
+                    <lightning-icon icon-name="custom:custom93" alternative-text="Wishlist" title="Wishlist"></lightning-icon>
+                    <span aria-hidden="true" class="slds-badge slds-theme_warning">{cartCount}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-3">
+            <c-brand-filter></c-brand-filter>
+        </div>
+        <div class="slds-col slds-size_2-of-3">
+            <c-product-list onwishlistupdate={handleWishlistUpdate} oncartupdate={handleCartUpdate}></c-product-list>
+        </div>
+    </div>
+</template>

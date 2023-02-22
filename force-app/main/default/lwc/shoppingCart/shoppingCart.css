@@ -1,0 +1,8 @@
+.slds-badge {
+    padding: 1px 3px;
+    font-size: 10px;
+    
+    position: relative;
+    top: 2;
+    right: 0;
+}
