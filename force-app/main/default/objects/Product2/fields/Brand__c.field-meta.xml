@@ -4,6 +4,15 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Brand</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Brand__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
     <referenceTo>Brand__c</referenceTo>
     <relationshipLabel>Products</relationshipLabel>
     <relationshipName>Products</relationshipName>
