@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-form-element">
+        <form>
+            <lightning-card  title="Member Skills" icon-name="custom:custom19"> 
+                <div class="slds-m-left_x-large slds-m-right_small slds-size_small">
+                    <lightning-input  name="teamMember" label="Name" onchange={handleTeamMember}></lightning-input>
+                </div>
+                    </br>
+                    <c-team-selection  ongetselectedteam={handleTeamsChange}></c-team-selection></br>
+                    <div class="slds-m-left_x-large slds-m-right_small slds-size_small">
+                    <lightning-input name="skills" label="Skills" onchange={handleSkillChange}></lightning-input>
+                    </br>
+                    <lightning-button variant="brand" label="Submit"  onclick={submitForm}></lightning-button>
+                </div>
+                
+            </lightning-card>
+        </form>
+
+    </div>
+
+    <lightning-card  title="Teams List" icon-name="custom:custom19"> 
+        <div class="slds-m-around_small">
+        </br>
+        <c-team-selection item-id={teams} ongetselectedteam={handleTeamsListChange}></c-team-selection></br>
+          <c-team-list></c-team-list>
+        </div>
+        
+    </lightning-card>
+</template>
